@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
-  GoogleAuthProvider,
-  signInWithPopup,
+ 
+  
 } from "firebase/auth";
 import { auth } from "../firebase";
-import { FcGoogle } from "react-icons/fc";
+
 
 function AuthCard() {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -31,14 +31,6 @@ function AuthCard() {
     }
   };
 
-  const handleGoogleSignIn = async () => {
-    const provider = new GoogleAuthProvider();
-    try {
-      await signInWithPopup(auth, provider);
-    } catch (error) {
-      console.error("Error signing in with Google:", error);
-    }
-  };
 
   return (
     <div className="max-w-sm mx-auto bg-white p-6 rounded-lg shadow-md">
@@ -70,13 +62,7 @@ function AuthCard() {
         >
           {isSignIn ? "Sign In" : "Sign Up"}
         </button>
-        <button
-          type="button"
-          onClick={handleGoogleSignIn}
-          className="w-full flex items-center justify-center bg-white border p-2 rounded mt-2"
-        >
-          <FcGoogle className="mr-2" /> Sign in with Google
-        </button>
+       
       </form>
       <div className="mt-4">
         <button
