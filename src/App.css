@@ -1,0 +1,22 @@
+/* Add this to your styles.css or a Tailwind config file */
+.bg-white {
+  background-color: #fff;
+}
+.border {
+  border: 1px solid #e2e8f0;
+}
+.p-2 {
+  padding: 0.5rem;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.text-blue-500 {
+  color: #3b82f6;
+}
+.text-2xl {
+  font-size: 1.5rem;
+}
