@@ -24,7 +24,7 @@ function AuthCard() {
       }
     } else {
       try {
-        await createUserWithEmailAndPassword(auth, Name, email, password);
+        await createUserWithEmailAndPassword(auth, email, password);
       } catch (error) {
         console.error("Error signing up:", error);
       }
